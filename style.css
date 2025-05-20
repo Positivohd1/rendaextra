@@ -166,6 +166,7 @@ ul li::before {
   height: 80px;
   margin-bottom: 1rem;
   box-shadow: 0 0 10px #00ff9977;
+  object-fit: cover;
 }
 
 .depoimento footer {
