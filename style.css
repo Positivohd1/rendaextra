@@ -1,10 +1,17 @@
-body {
+/* Reset e base */
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: 'Arial', sans-serif;
+  padding: 0;
+}
+body {
+  font-family: Arial, sans-serif;
   background: #121212;
   color: #fff;
+  line-height: 1.6;
 }
 
+/* Cabeçalho */
 header {
   text-align: center;
   padding: 3rem 1rem;
@@ -12,18 +19,25 @@ header {
   color: #000;
   box-shadow: 0 0 30px #00ffaa55;
 }
-
 .titulo-3d {
   font-size: 3rem;
+  color: #000;
   text-shadow: 2px 2px #000, 4px 4px #0ff;
+  display: inline-block;
+  transform: perspective(400px) rotateX(10deg) rotateY(-10deg);
 }
 
+/* Container principal */
 .container {
   max-width: 800px;
-  margin: auto;
-  padding: 2rem;
+  margin: 2rem auto;
+  padding: 1rem;
+  background: #1e1e1e;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #00ffa033;
 }
 
+/* Seção de gamificação */
 .gamificacao {
   background: #1f1f1f;
   padding: 2rem;
@@ -32,56 +46,74 @@ header {
   max-width: 700px;
   text-align: center;
 }
-
+.gamificacao h2 {
+  margin-bottom: 1rem;
+}
 .gamificacao ul {
   list-style: none;
-  padding: 0;
+  margin-top: 1rem;
+  text-align: left;
 }
-
 .gamificacao li {
-  margin: 1rem 0;
+  margin: 0.8rem 0;
   font-size: 1.1rem;
 }
 
+/* Barra de progresso */
 .progress-bar {
   width: 100%;
   height: 15px;
   background: #333;
   border-radius: 20px;
   overflow: hidden;
-  margin-bottom: 1rem;
+  margin: 1rem auto;
 }
-
 .progress {
+  width: 0;
   height: 100%;
-  width: 0%;
   background: #00ff99;
   transition: width 0.5s ease-in-out;
 }
 
-.depoimento {
+/* Cartão 3D */
+.mission-card3d {
+  width: 150px;
+  height: 100px;
+  margin: 0 auto 1rem;
+  perspective: 600px;
+  position: relative;
+}
+.card-face {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background: #333;
   display: flex;
   align-items: center;
-  gap: 1rem;
-  background: #2a2a2a;
-  padding: 1rem;
-  border-radius: 10px;
-  margin-bottom: 1rem;
+  justify-content: center;
+  color: #fff;
+  font-weight: bold;
+  position: absolute;
+  backface-visibility: hidden;
+  transition: transform 0.6s;
+}
+.card-face.back {
+  background: #00ff99;
+  color: #000;
+  transform: rotateY(180deg);
+}
+.mission-card3d.flipped .front {
+  transform: rotateY(-180deg);
+}
+.mission-card3d.flipped .back {
+  transform: rotateY(0deg);
 }
 
-.depoimento img {
-  width: 60px;
-  height: 60px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 2px solid #00ffaa;
-}
-
+/* Botão CTA */
 .cta {
   text-align: center;
   margin: 2rem 0;
 }
-
 .cta a {
   background: #ff0055;
   color: #fff;
@@ -91,11 +123,11 @@ header {
   text-decoration: none;
   transition: background 0.3s;
 }
-
 .cta a:hover {
   background: #ff3377;
 }
 
+/* Rodapé */
 footer {
   text-align: center;
   padding: 2rem;
