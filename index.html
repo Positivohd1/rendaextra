@@ -2,62 +2,44 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Renda Fácil no Celular</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
   <header>
     <h1>Renda Fácil no Celular</h1>
-    <p>Descubra como faturar R$100 por dia usando só seu celular</p>
+    <p>Aprenda como conquistar uma renda extra usando apenas o seu celular!</p>
   </header>
 
-  <main class="container">
-    <section class="method card3d">
-      <div class="inner-card">
-        <h2>Método simples, resultado real</h2>
-        <p>Esse método já mudou a vida de centenas de quebrados. Não tem segredo, não tem enrolação: só seguir o passo a passo e deixar o Pix cantar alto.</p>
-        <ul>
-          <li>Renda extra fácil e rápida</li>
-          <li>Sem aparecer</li>
-          <li>Com celular e internet</li>
-        </ul>
-        <div class="cta">
-          <a href="https://pay.kirvano.com/89c6c570-089f-480b-bd04-267e6a825d5c?aff=26971759-89d3-4184-a866-e662a8987230" target="_blank" rel="noopener noreferrer">ACESSAR O MÉTODO AGORA</a>
-        </div>
-      </div>
-    </section>
+  <section class="progress-section">
+    <h3>🎯 Seu progresso para descobrir o método</h3>
+    <div class="progress-bar-bg">
+      <div class="progress-bar-fill" id="progressFill"></div>
+    </div>
+    <p id="progressText">0% completo</p>
+  </section>
 
-    <!-- Depoimentos -->
-    <section class="depoimentos">
-      <h2>O que dizem os que já ganharam</h2>
-      <div class="depoimentos-carousel">
-        <div class="depoimento active">
-          <img src="imagem1.jpg" alt="Avatar depoimento 1" />
-          <p>"Não era fácil pra mim no começo, mas seguindo o passo a passo, consegui um dinheiro extra que ajudou muito no mês."</p>
-          <footer>— Júlia, 28 anos, São Paulo</footer>
-        </div>
-        <div class="depoimento">
-          <img src="imagem2.jpg" alt="Avatar depoimento 2" />
-          <p>"Nunca pensei que fosse possível ganhar assim usando só o celular. O método é simples e funciona mesmo."</p>
-          <footer>— Rafael, 35 anos, Recife</footer>
-        </div>
-        <div class="depoimento">
-          <img src="imagem3.jpg" alt="Avatar depoimento 3" />
-          <p>"Pra quem quer uma renda extra, é uma boa."</p>
-          <footer>— Larissa, 24 anos, Belo Horizonte</footer>
-        </div>
-      </div>
-      <div class="depoimentos-controls">
-        <button id="prevDepo" aria-label="Depoimento anterior">‹</button>
-        <button id="nextDepo" aria-label="Próximo depoimento">›</button>
-      </div>
-    </section>
+  <main class="container">
+    <h2>O que você vai aprender:</h2>
+    <ul>
+      <li>✅ Método testado por milhares</li>
+      <li>📱 Só com celular e internet</li>
+      <li>💰 Renda extra fácil</li>
+    </ul>
+
+    <div class="cta">
+      <a href="#" id="ctaBtn">Quero começar agora!</a>
+    </div>
   </main>
 
+  <div class="popup-bonus" id="bonusMsg">
+    🏆 Você chegou até o fim! Bônus desbloqueado: 50% OFF hoje!
+  </div>
+
   <footer>
-    Essa página é só para fins informativos. Resultados variam de pessoa pra pessoa. Mas se tu não clicar, não vai ganhar nada.
+    <p>© 2025 - Essa página é informativa. Resultados podem variar.</p>
   </footer>
 
   <script src="script.js"></script>
