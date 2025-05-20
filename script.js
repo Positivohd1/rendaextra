@@ -1,29 +1,25 @@
-const m1 = document.getElementById("m1");
-const m2 = document.getElementById("m2");
-const m3 = document.getElementById("m3");
-const progress = document.getElementById("progress");
+// Referências às missões e progresso
+const m1 = document.getElementById('m1');
+const m2 = document.getElementById('m2');
+const progress = document.getElementById('progress');
+const card = document.getElementById('missionCard');
+const ctaBtn = document.getElementById('ctaBtn');
 
-// Atualiza a barra de progresso com base nas missões
+// Atualiza barra e gira o card 3D
 function updateProgress() {
-  const total = [m1, m2, m3];
-  const done = total.filter(m => m.checked).length;
-  const percent = (done / total.length) * 100;
-  progress.style.width = percent + "%";
+  const doneCount = [m1, m2].filter(c => c.checked).length;
+  const percent = (doneCount / 2) * 100;
+  progress.style.width = percent + '%';
+  if (doneCount === 2) {
+    card.classList.add('flipped');
+  }
 }
 
-[m1, m2, m3].forEach(missao => {
-  missao.addEventListener("change", updateProgress);
-});
+// Eventos para cada missão
+[m1, m2].forEach(chk => chk.addEventListener('change', updateProgress));
 
-window.addEventListener("scroll", () => {
-  const depo = document.getElementById("depoimentos").getBoundingClientRect();
-  if (depo.top < window.innerHeight) {
-    m2.checked = true;
-    updateProgress();
-  }
-});
-
-document.getElementById("ctaBtn").addEventListener("click", () => {
-  m3.checked = true;
+// Marca missão 2 ao clicar no CTA
+ctaBtn.addEventListener('click', () => {
+  m2.checked = true;
   updateProgress();
 });
