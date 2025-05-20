@@ -1,29 +1,22 @@
-// Carrossel de depoimentos
+let progress = 0;
+const fill = document.getElementById("progressFill");
+const text = document.getElementById("progressText");
+const bonusMsg = document.getElementById("bonusMsg");
 
-const depoimentos = document.querySelectorAll('.depoimento');
-const prevBtn = document.getElementById('prevDepo');
-const nextBtn = document.getElementById('nextDepo');
-let currentIndex = 0;
-
-function showDepo(index) {
-  depoimentos.forEach((depo, i) => {
-    depo.classList.toggle('active', i === index);
-  });
+function updateProgress(amount) {
+  progress = Math.min(progress + amount, 100);
+  fill.style.width = `${progress}%`;
+  text.textContent = `${progress}% completo`;
 }
 
-function nextDepo() {
-  currentIndex = (currentIndex + 1) % depoimentos.length;
-  showDepo(currentIndex);
-}
+document.getElementById("ctaBtn").addEventListener("click", () => {
+  updateProgress(50);
+});
 
-function prevDepo() {
-  currentIndex = (currentIndex - 1 + depoimentos.length) % depoimentos.length;
-  showDepo(currentIndex);
-}
-
-// Eventos
-nextBtn.addEventListener('click', nextDepo);
-prevBtn.addEventListener('click', prevDepo);
-
-// Mostrar primeiro depoimento ao carregar
-showDepo(currentIndex);
+// Ao rolar até o final, mostra bônus
+window.addEventListener("scroll", () => {
+  if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 30) {
+    bonusMsg.style.display = "block";
+    updateProgress(50);
+  }
+});
