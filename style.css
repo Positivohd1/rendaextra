@@ -3,6 +3,7 @@ body {
   font-family: 'Arial', sans-serif;
   background: #121212;
   color: #fff;
+  line-height: 1.6;
 }
 
 header {
@@ -10,7 +11,7 @@ header {
   color: #000;
   text-align: center;
   padding: 2rem;
-  box-shadow: 0 0 20px #00ffa055;
+  box-shadow: 0 0 15px #00ffa055;
 }
 
 .container {
@@ -19,26 +20,32 @@ header {
   padding: 1rem;
   background: #1e1e1e;
   border-radius: 10px;
-  box-shadow: 0 0 15px #00ffa033;
+  box-shadow: 0 0 20px #00ffa033;
 }
 
-.missao-box {
+.missoes {
   background: #222;
-  margin: 1rem auto;
-  max-width: 600px;
   padding: 1.5rem;
+  margin: 2rem auto;
   border-radius: 10px;
-  box-shadow: 0 0 10px #00ffa044;
+  max-width: 700px;
+  text-align: left;
 }
 
-.missao-box ul {
+.missoes ul {
   list-style: none;
-  padding-left: 0;
+  padding: 0;
 }
 
-.missao-box li {
+.missoes li {
   margin-bottom: 1rem;
-  font-size: 1rem;
+}
+
+.depoimento {
+  background: #2a2a2a;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
 }
 
 .cta {
@@ -50,36 +57,24 @@ header {
   background: #ff0055;
   color: #fff;
   padding: 1rem 2rem;
-  text-decoration: none;
-  border-radius: 10px;
-  font-size: 1.2rem;
   font-weight: bold;
-  transition: background 0.3s ease;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: 0.3s;
 }
 
 .cta a:hover {
   background: #ff3380;
 }
 
-.depoimentos {
-  margin-top: 2rem;
-}
-
-.depoimento {
-  background: #2a2a2a;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  border-radius: 8px;
-}
-
-.recompensa {
+.bonus-msg {
   display: none;
-  background: #00ff99;
-  color: #000;
   position: fixed;
   bottom: 30px;
   left: 50%;
   transform: translateX(-50%);
+  background: #00ff99;
+  color: #000;
   padding: 1rem 2rem;
   border-radius: 20px;
   font-weight: bold;
