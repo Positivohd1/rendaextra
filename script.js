@@ -1,25 +1,29 @@
-// Referências às missões e progresso
-const m1 = document.getElementById('m1');
-const m2 = document.getElementById('m2');
-const progress = document.getElementById('progress');
-const card = document.getElementById('missionCard');
-const ctaBtn = document.getElementById('ctaBtn');
+// Carrossel de depoimentos
 
-// Atualiza barra e gira o card 3D
-function updateProgress() {
-  const doneCount = [m1, m2].filter(c => c.checked).length;
-  const percent = (doneCount / 2) * 100;
-  progress.style.width = percent + '%';
-  if (doneCount === 2) {
-    card.classList.add('flipped');
-  }
+const depoimentos = document.querySelectorAll('.depoimento');
+const prevBtn = document.getElementById('prevDepo');
+const nextBtn = document.getElementById('nextDepo');
+let currentIndex = 0;
+
+function showDepo(index) {
+  depoimentos.forEach((depo, i) => {
+    depo.classList.toggle('active', i === index);
+  });
 }
 
-// Eventos para cada missão
-[m1, m2].forEach(chk => chk.addEventListener('change', updateProgress));
+function nextDepo() {
+  currentIndex = (currentIndex + 1) % depoimentos.length;
+  showDepo(currentIndex);
+}
 
-// Marca missão 2 ao clicar no CTA
-ctaBtn.addEventListener('click', () => {
-  m2.checked = true;
-  updateProgress();
-});
+function prevDepo() {
+  currentIndex = (currentIndex - 1 + depoimentos.length) % depoimentos.length;
+  showDepo(currentIndex);
+}
+
+// Eventos
+nextBtn.addEventListener('click', nextDepo);
+prevBtn.addEventListener('click', prevDepo);
+
+// Mostrar primeiro depoimento ao carregar
+showDepo(currentIndex);
