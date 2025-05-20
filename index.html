@@ -7,39 +7,49 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
   <header>
     <h1>Renda Fácil no Celular</h1>
-    <p>Aprenda como conquistar uma renda extra usando apenas o seu celular!</p>
+    <p>Transforme seu celular em uma fonte de renda extra!</p>
   </header>
 
-  <section class="progress-section">
-    <h3>🎯 Seu progresso para descobrir o método</h3>
-    <div class="progress-bar-bg">
-      <div class="progress-bar-fill" id="progressFill"></div>
-    </div>
-    <p id="progressText">0% completo</p>
+  <section class="missao-box">
+    <h2>🎯 Suas Missões de Hoje</h2>
+    <ul id="missoes">
+      <li><input type="checkbox" id="missao1" /> Ler a explicação</li>
+      <li><input type="checkbox" id="missao2" /> Ver os depoimentos</li>
+      <li><input type="checkbox" id="missao3" /> Clicar para acessar o método</li>
+    </ul>
   </section>
 
   <main class="container">
-    <h2>O que você vai aprender:</h2>
-    <ul>
-      <li>✅ Método testado por milhares</li>
-      <li>📱 Só com celular e internet</li>
-      <li>💰 Renda extra fácil</li>
-    </ul>
+    <section>
+      <h2>💡 Como funciona?</h2>
+      <p>Você só precisa de um celular e internet para começar. Sem precisar aparecer, sem precisar vender.</p>
+    </section>
+
+    <section class="depoimentos" id="depoimentos">
+      <h2>📣 Depoimentos reais</h2>
+      <div class="depoimento">
+        <p>"Comecei semana passada e já fiz meu primeiro pix. Simples e direto!"</p>
+        <span>– Ana, RJ</span>
+      </div>
+      <div class="depoimento">
+        <p>"Uso só 1h por dia e já ganhei mais que no meu antigo bico."</p>
+        <span>– João, SP</span>
+      </div>
+    </section>
 
     <div class="cta">
-      <a href="#" id="ctaBtn">Quero começar agora!</a>
+      <a href="https://pay.kirvano.com/89c6c570-089f-480b-bd04-267e6a825d5c?aff=26971759-89d3-4184-a866-e662a8987230" target="_blank" id="ctaBtn">🔓 Acessar o Método</a>
     </div>
   </main>
 
-  <div class="popup-bonus" id="bonusMsg">
-    🏆 Você chegou até o fim! Bônus desbloqueado: 50% OFF hoje!
+  <div class="recompensa" id="bonus">
+    🎁 Missões completas! Desbloqueado: 50% OFF hoje!
   </div>
 
   <footer>
-    <p>© 2025 - Essa página é informativa. Resultados podem variar.</p>
+    <p>© 2025 - Resultados variam. Esta é uma página informativa.</p>
   </footer>
 
   <script src="script.js"></script>
