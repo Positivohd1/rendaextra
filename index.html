@@ -3,78 +3,111 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Top Ofertas da Shopee 🔥</title>
+  <title>Ofertas Top Shopee 🔥</title>
   <style>
-    body {
-      font-family: 'Arial', sans-serif;
-      background: #f6f6f6;
-      margin: 0;
-      padding: 1rem;
-    }
-    h1 {
-      text-align: center;
-      color: #ee4d2d;
-      margin-bottom: 1rem;
-    }
-    .produto {
-      background: #fff;
-      border-radius: 16px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      padding: 1rem;
-      margin-bottom: 1.5rem;
-    }
-    .produto img {
-      max-width: 100%;
-      border-radius: 12px;
-    }
-    .titulo {
-      font-size: 1.1rem;
-      font-weight: bold;
-      margin-top: 0.5rem;
-    }
-    .botao {
-      display: inline-block;
-      background-color: #ee4d2d;
-      color: #fff;
-      padding: 0.6rem 1rem;
-      border-radius: 8px;
-      text-decoration: none;
-      margin-top: 0.7rem;
-    }
+    body { margin:0; font-family: Arial, sans-serif; background:#f6f6f6; color:#333; }
+    .hero { text-align:center; padding:2rem 1rem; background:#fff; }
+    .hero h1 { color:#ee4d2d; margin-bottom:0.5rem; font-size:2rem; }
+    .hero p { font-size:1.1rem; margin-bottom:1rem; }
+    .cta { background:#ee4d2d; color:#fff; padding:0.8rem 1.5rem; font-size:1.2rem; border:none; border-radius:6px; cursor:pointer; }
+    .badge { display:inline-block; background:#ff5757; color:#fff; padding:0.4rem 0.8rem; border-radius:4px; font-size:0.9rem; margin-top:0.5rem; }
+    .produtos { padding:1rem; }
+    .produto { background:#fff; border-radius:12px; margin-bottom:1.5rem; padding:1rem; }
+    .produto img { width:100%; height:auto; border-radius:8px; }
+    .produto h2 { margin:0.7rem 0 0.3rem; font-size:1.2rem; }
+    .beneficios { font-size:0.95rem; margin:0.5rem 0; list-style:disc inside; }
+    .botao { display:inline-block; background:#ee4d2d; color:#fff; padding:0.6rem 1rem; border-radius:6px; text-decoration:none; }
+    .social-proof, .faq { background:#fff; padding:1rem; margin:1rem 0; border-radius:12px; }
+    .testimonial p { font-style:italic; margin-bottom:1rem; }
+    .faq h3 { margin:0.5rem 0; font-size:1rem; }
+    .faq p { margin:0 0 0.8rem; font-size:0.95rem; }
   </style>
 </head>
 <body>
-  <h1>🔥 Produtos Mais Vendidos da Shopee 🔥</h1>
 
-  <div class="produto">
-    <img src="https://cf.shopee.com.br/file/9a9986f654eb8f9ecf4ee6826c4eec09" alt="Organizador Dobrável">
-    <p class="titulo">Organizador Dobrável Multiuso</p>
-    <a class="botao" href="https://shope.ee/SEULINK1" target="_blank">Ver Oferta</a>
-  </div>
+  <section class="hero">
+    <h1>🔥 Ofertas Irresistíveis da Shopee</h1>
+    <p>Produtos selecionados, com custo-benefício e comissões de até 10%!</p>
+    <button class="cta">Veja os Produtos</button>
+    <div class="badge">Oferta por tempo limitado!</div>
+  </section>
 
-  <div class="produto">
-    <img src="https://cf.shopee.com.br/file/03083e973c8454b7f453dfc47fbbcc82" alt="Fone Bluetooth">
-    <p class="titulo">Fone de Ouvido Bluetooth Estilo Apple</p>
-    <a class="botao" href="https://shope.ee/SEULINK2" target="_blank">Ver Oferta</a>
-  </div>
+  <section class="produtos">
+    <!-- Fone de ouvido Bluetooth -->
+    <div class="produto">
+      <img src="image-fone-bluetooth.jpg" alt="Fone de ouvido Bluetooth">
+      <h2>Fone de Ouvido Bluetooth</h2>
+      <ul class="beneficios">
+        <li>Alta qualidade de som e sem fio</li>
+        <li>Compatível com celulares e notebooks</li>
+      </ul>
+      <a class="botao" href="SEU_LINK_AFILIADO1" target="_blank">Ver Oferta</a>
+    </div>
 
-  <div class="produto">
-    <img src="https://cf.shopee.com.br/file/0b15a8dcdf14a2b0320baf61ae157132" alt="Ring Light">
-    <p class="titulo">Mini Ring Light com Tripé para Celular</p>
-    <a class="botao" href="https://shope.ee/SEULINK3" target="_blank">Ver Oferta</a>
-  </div>
+    <!-- Relógio Inteligente -->
+    <div class="produto">
+      <img src="image-relogio-inteligente.jpg" alt="Relógio Inteligente">
+      <h2>Relógio Inteligente</h2>
+      <ul class="beneficios">
+        <li>Monitoramento de atividades e notificações</li>
+        <li>Design moderno e resistente</li>
+      </ul>
+      <a class="botao" href="SEU_LINK_AFILIADO2" target="_blank">Ver Oferta</a>
+    </div>
 
-  <div class="produto">
-    <img src="https://cf.shopee.com.br/file/235df232a8ddda991ed89cc6d8c31679" alt="Massageador Facial">
-    <p class="titulo">Massageador Facial Elétrico</p>
-    <a class="botao" href="https://shope.ee/SEULINK4" target="_blank">Ver Oferta</a>
-  </div>
+    <!-- Ring Light -->
+    <div class="produto">
+      <img src="image-ring-light.jpg" alt="Ring Light">
+      <h2>Ring Light com Tripé</h2>
+      <ul class="beneficios">
+        <li>Iluminação ideal para vídeos e selfies</li>
+        <li>Fácil ajuste e transporte</li>
+      </ul>
+      <a class="botao" href="SEU_LINK_AFILIADO3" target="_blank">Ver Oferta</a>
+    </div>
 
-  <div class="produto">
-    <img src="https://cf.shopee.com.br/file/8dc22e1b21a8f7b4fa5e44342b7f145d" alt="Cortador de Legumes">
-    <p class="titulo">Cortador de Legumes Retrátil</p>
-    <a class="botao" href="https://shope.ee/SEULINK5" target="_blank">Ver Oferta</a>
-  </div>
+    <!-- Capinha de Celular -->
+    <div class="produto">
+      <img src="image-capinha-celular.jpg" alt="Capinha de Celular">
+      <h2>Capinha para Celular</h2>
+      <ul class="beneficios">
+        <li>Protege e valoriza o visual do aparelho</li>
+        <li>Várias cores e estilos</li>
+      </ul>
+      <a class="botao" href="SEU_LINK_AFILIADO4" target="_blank">Ver Oferta</a>
+    </div>
+
+    <!-- Mini Processador -->
+    <div class="produto">
+      <img src="image-mini-processador.jpg" alt="Mini Processador">
+      <h2>Mini Processador de Legumes</h2>
+      <ul class="beneficios">
+        <li>Prático e rápido para a cozinha</li>
+        <li>Compacto e fácil de limpar</li>
+      </ul>
+      <a class="botao" href="SEU_LINK_AFILIADO5" target="_blank">Ver Oferta</a>
+    </div>
+  </section>
+
+  <section class="social-proof">
+    <h2>O que falam por aí</h2>
+    <div class="testimonial">
+      <p>“Excelente qualidade, chegou rápido e funciona muito bem.” – Ana M.</p>
+    </div>
+    <div class="testimonial">
+      <p>“Vale cada centavo, super recomendo!” – Pedro R.</p>
+    </div>
+  </section>
+
+  <section class="faq">
+    <h2>Dúvidas Frequentes</h2>
+    <h3>Como funciona o pedido?</h3>
+    <p>Você clica no botão, compra na Shopee e eu recebo uma comissão — sem custo extra para você.</p>
+    <h3>Frete gratuito?</h3>
+    <p>Muitos itens têm frete grátis ou preço Super Oferta.</p>
+    <h3>Quanto tempo demora?</h3>
+    <p>Geralmente entre 10 e 20 dias úteis, depende da sua cidade.</p>
+  </section>
 
 </body>
 </html>
